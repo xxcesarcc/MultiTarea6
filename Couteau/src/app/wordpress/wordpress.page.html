@@ -1,0 +1,26 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>WordPress</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">WordPress</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content>
+    <ion-item *ngFor="let noticia of noticias">
+      <ion-thumbnail slot="start">
+        <img src="https://variety.com/wp-content/uploads/2014/02/bbc-america-logo1.jpg?w=1000&h=563&crop=1&resize=681%2C383" alt="Logo de WordPress">
+      </ion-thumbnail>
+      <ion-label>
+        <h2>{{ noticia.titulo }}</h2>
+        <p>{{ noticia.resumen }}</p>
+        <a [href]="noticia.enlace" target="_blank">Visitar Noticia</a>
+      </ion-label>
+    </ion-item>
+  </ion-content>
+</ion-content>

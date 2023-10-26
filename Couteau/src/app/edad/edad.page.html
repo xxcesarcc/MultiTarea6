@@ -1,0 +1,30 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Edad</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Edad</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content>
+    <ion-item>
+      <ion-label>Nombre:</ion-label>
+      <ion-input [(ngModel)]="nombre" placeholder="Ingrese el nombre"></ion-input>
+    </ion-item>
+  
+    <ion-button (click)="determinarEdad()">Determinar Edad</ion-button>
+  
+    <ion-card *ngIf="edadMensaje">
+      <ion-img [src]="imagenUrl" class="rango"></ion-img>
+      <ion-card-content>
+        <h2>{{ edadMensaje }}</h2>
+        <p>Edad: {{ edad }}</p>
+      </ion-card-content>
+    </ion-card>
+  </ion-content>
+</ion-content>
